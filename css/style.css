@@ -16,6 +16,11 @@ body{
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #395B64;
+    border: 1.5px solid #fff;
+}
 span{
   font-size: 40px;
   /* color: #ff4500; */
