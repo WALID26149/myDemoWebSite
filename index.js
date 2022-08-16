@@ -2,6 +2,29 @@ const aboutMe = document.querySelector('.bodyContent');
 const scroll = document.querySelector('.btn-scrolle');
 
 
+
+scroll.addEventListener('click', function (e) {
+  const s1coords = aboutMe.getBoundingClientRect();
+  // console.log(s1coords);
+  // console.log(e.target.getBoundingClientRect());
+  //
+  // console.log('Current scroll (X/Y)', window.pageXOffset, window.pageYOffset);
+  //
+  // console.log(
+  //   'height/width viewport',
+  //   document.documentElement.clientHeight,
+  //   document.documentElement.clientWidth
+  // );
+  window.scrollTo({
+    left: s1coords.left + window.pageXOffset,
+    top: s1coords.top + window.pageYOffset,
+    behavior: 'smooth',
+  });
+
+  // section1.scrollIntoView({ behavior: 'smooth' });
+});
+
+
 const slider = function () {
   const slides = document.querySelectorAll('.slide');
   const btnLeft = document.querySelector('.slider__btn--left');
@@ -85,26 +108,3 @@ const slider = function () {
   });
 };
 slider();
-
-
-
-scroll.addEventListener('click', function (e) {
-  const s1coords = aboutMe.getBoundingClientRect();
-  // console.log(s1coords);
-  // console.log(e.target.getBoundingClientRect());
-  //
-  // console.log('Current scroll (X/Y)', window.pageXOffset, window.pageYOffset);
-  //
-  // console.log(
-  //   'height/width viewport',
-  //   document.documentElement.clientHeight,
-  //   document.documentElement.clientWidth
-  // );
-  window.scrollTo({
-    left: s1coords.left + window.pageXOffset,
-    top: s1coords.top + window.pageYOffset,
-    behavior: 'smooth',
-  });
-
-  // section1.scrollIntoView({ behavior: 'smooth' });
-});
