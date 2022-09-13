@@ -2,7 +2,6 @@ const aboutMe = document.querySelector('.bodyContent');
 const scroll = document.querySelector('.btn-scrolle');
 
 
-
 scroll.addEventListener('click', function (e) {
   const s1coords = aboutMe.getBoundingClientRect();
   // console.log(s1coords);
@@ -22,6 +21,14 @@ scroll.addEventListener('click', function (e) {
   });
 
   // section1.scrollIntoView({ behavior: 'smooth' });
+});
+// scrolle in the page
+document.querySelectorAll('.a-link').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    const id = this.getAttribute('href');
+    document.querySelector(id).scrollIntoView({behavior: 'smooth'})
+  });
 });
 
 
