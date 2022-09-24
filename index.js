@@ -1,5 +1,6 @@
 const aboutMe = document.querySelector('.bodyContent');
 const scroll = document.querySelector('.btn-scrolle');
+const stickyNav = document.querySelector('.navbar');
 
 
 scroll.addEventListener('click', function (e) {
@@ -115,3 +116,16 @@ const slider = function () {
   });
 };
 slider();
+
+// sticky Navigation
+// const initCrd = aboutMe.getBoundingClientRect();
+// console.log(initCrd);
+//
+// window.addEventListener('scroll', function () {
+//   console.log(window.scrollY);
+//   if (window.scrollY > initCrd.top) {
+//     return stickyNav.classList.add('sticky')
+//   } else {
+//     return stickyNav.classList.remove('sticky')
+//   }
+// });
