@@ -118,14 +118,33 @@ const slider = function () {
 slider();
 
 // sticky Navigation
-// const initCrd = aboutMe.getBoundingClientRect();
-// console.log(initCrd);
-//
-// window.addEventListener('scroll', function () {
-//   console.log(window.scrollY);
-//   if (window.scrollY > initCrd.top) {
-//     return stickyNav.classList.add('sticky')
-//   } else {
-//     return stickyNav.classList.remove('sticky')
-//   }
-// });
+const initCrd = aboutMe.getBoundingClientRect();
+
+window.addEventListener('scroll', function () {
+  if (window.scrollY > initCrd.top) {
+    return stickyNav.classList.add('sticky')
+  } else {
+    return stickyNav.classList.remove('sticky')
+  }
+});
+// lazy load for the page
+const allSections = document.querySelectorAll('.bodyContent');
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove('section-hidden');
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add('section-hidden');
+});
