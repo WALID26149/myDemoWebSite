@@ -33,8 +33,7 @@ samp{
   transition: 0.3s;
 }
 samp:hover{
-  /* font-size: 82px; */
-  color: #fff;
+  font-size: 90px;
   transition: 0.3s;
 }
 /* //////header section/////// */
@@ -42,7 +41,7 @@ nav {
   display: flex;
   justify-content:space-between;
   align-items: center;
-  padding:2rem 13rem;
+  padding:2% 13%;
   background: #000;
 }
 nav ul {
@@ -160,7 +159,7 @@ nav a {
  .p-body{
    font-size: 35px;
    text-align: left;
-   padding-right: 15%;
+   padding-right: 30%;
    margin-top: 10px;
    margin-bottom: 10px;
  }
@@ -511,7 +510,7 @@ nav a {
     font-size: 40px;
   }
   .p2-exp{
-    padding-right: 5%;
+    padding-right: 25%;
   }
   .slider-txt{
     bottom: 0;
@@ -571,7 +570,7 @@ nav a {
   .aboutMe{
     bottom: 0px;
     text-align: left;
-    padding-right: 40%;
+    padding-right: 15%;
     padding-left: 13%;
     padding-top:100px;
     padding-bottom:100px;

@@ -2,7 +2,6 @@ const aboutMe = document.querySelector('.bodyContent');
 const scroll = document.querySelector('.btn-scrolle');
 const stickyNav = document.querySelector('.navbar');
 
-
 scroll.addEventListener('click', function (e) {
   const s1coords = aboutMe.getBoundingClientRect();
   // console.log(s1coords);
@@ -23,6 +22,7 @@ scroll.addEventListener('click', function (e) {
 
   // section1.scrollIntoView({ behavior: 'smooth' });
 });
+
 // scrolle in the page
 document.querySelectorAll('.a-link').forEach(function (el) {
   el.addEventListener('click', function (e) {
@@ -31,7 +31,6 @@ document.querySelectorAll('.a-link').forEach(function (el) {
     document.querySelector(id).scrollIntoView({behavior: 'smooth'})
   });
 });
-
 
 const slider = function () {
   const slides = document.querySelectorAll('.slide');
