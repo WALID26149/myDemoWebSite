@@ -2,6 +2,10 @@ const aboutMe = document.querySelector('.bodyContent');
 const scroll = document.querySelector('.btn-scrolle');
 const stickyNav = document.querySelector('.navbar');
 
+// Download file
+// <form method="get" action="file.doc">
+//    <button type="submit">Download!</button>
+// </form>
 scroll.addEventListener('click', function (e) {
   const s1coords = aboutMe.getBoundingClientRect();
   // console.log(s1coords);
