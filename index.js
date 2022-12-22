@@ -11,7 +11,7 @@ scroll.addEventListener('click', function (e) {
   // console.log(s1coords);
   // console.log(e.target.getBoundingClientRect());
   //
-  // console.log('Current scroll (X/Y)', window.pageXOffset, window.pageYOffset);
+  // console.log(window.pageXOffset, window.pageYOffset);
   //
   // console.log(
   //   'height/width viewport',
@@ -24,7 +24,7 @@ scroll.addEventListener('click', function (e) {
     behavior: 'smooth',
   });
 
-  // section1.scrollIntoView({ behavior: 'smooth' });
+  // s1coords.scrollIntoView({ behavior: 'smooth' });
 });
 
 // scrolle in the page
@@ -150,4 +150,11 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add('section-hidden');
+});
+
+let typed = new Typed(".auto-type", {
+  strings:["UI/UX Designer", "Full-Stack Developer", "Freelancer"],
+  typeSpeed:150,
+  backSpeed:150,
+  loop:true
 });
