@@ -446,7 +446,9 @@ nav a {
 
 .footer-basic .copyright {
   margin-top:15px;
-  text-align:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size:13px;
   color:#aaa;
   margin-bottom:0;
