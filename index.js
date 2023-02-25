@@ -131,7 +131,8 @@ window.addEventListener('scroll', function () {
   }
 });
 // lazy load for the page
-const allSections = document.querySelectorAll('.bodyContent');
+const bodyContent = document.querySelectorAll('.bodyContent');
+const body = document.querySelectorAll('body');
 
 const revealSection = function (entries, observer) {
   const [entry] = entries;
@@ -147,7 +148,7 @@ const sectionObserver = new IntersectionObserver(revealSection, {
   threshold: 0.15,
 });
 
-allSections.forEach(function (section) {
+bodyContent.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add('section-hidden');
 });
