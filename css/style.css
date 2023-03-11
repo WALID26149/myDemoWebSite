@@ -26,6 +26,7 @@ body::-webkit-scrollbar-thumb {
 span{
   font-size: 45px;
   color: #395B64;
+  font-weight: 700;
 }
 .auto-type{
   color: #fff
@@ -40,35 +41,71 @@ samp:hover{
   transition: 0.3s;
 }
 /* //////header section/////// */
-nav {
+.navbar {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
-  padding:2% 13%;
+  padding: 4% 12% 2%;
 }
-nav ul {
+
+.navbar-brand {
+  font-size: 1.5rem;
   display: flex;
+  align-items: center;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: end;
+  align-items: baseline;
+  position: absolute;
+  left: -120px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   list-style: none;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
 }
 
-nav li {
-  padding-left: 1rem;
-  position: relative;
-  right: 40%
+.navbar-menu li {
+  margin-bottom: 1rem;
 }
 
-nav a {
+.navbar-menu a {
+  display: block;
+  padding:0 1.5rem;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navbar-toggle-label {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+.a-nav{
   text-decoration: none;
   color: #fff;
+  padding: 0 10px
 }
-/* .navbar{
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  transition: 0.4s;
-  background-color:#000;
-} */
+.lni-consulting::before {
+  font-size: 35px;
+  color: #0081C9
+}
+.nav-btn{
+  /* margin: 0 30px; */
+  padding: 10px 10px;
+  color: #fff;
+  background-color: #0081C9;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#navbar-toggle{
+  display:none
+}
 /* sticky nav */
 /* .sticky{
   position: fixed;
@@ -151,6 +188,9 @@ nav a {
 .h1-name{
   display: block;
   margin-left: 13%
+}
+.h1-nav{
+  margin-top: 130px;
 }
  /* ///////// body section ////////// */
 .bodyContent{
@@ -528,6 +568,34 @@ nav a {
   .p-contact{
     padding-left: 5px
   }
+  .navbar {
+      position: relative;
+    }
+
+    .navbar-menu {
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .navbar-toggle-label {
+      display: block;
+      font-size: 30px
+    }
+    .nav-btn{
+      margin: 0 0 25px
+    }
+    #navbar-toggle:checked ~ .navbar-menu {
+      opacity: 1;
+      visibility: visible;
+      margin-top: 20px
+    }
 }
 /* media section for Tablet */
 @media (max-width:1500px){
@@ -544,7 +612,7 @@ nav a {
     margin-right: 16%;
     margin-left: 60%;
   }
-  .navbar{
+  /* .navbar{
     padding: 40px 0;
   }
   .ul{
@@ -554,7 +622,7 @@ nav a {
   .h2-nav{
     position: absolute;
     left: 13%
-  }
+  } */
   .img-exp{
     display: none;
   }
@@ -583,14 +651,17 @@ nav a {
   }
 }
 @media (min-width:320px) and (max-width:480px) {
+  .navbar{
+    padding: 4% 11% 2%
+  }
   .header{
     min-height: 50rem
   }
-  .ul{
+  /* .ul{
     left: 55%;
     top: 30px
   }
   .a-link{
     font-size: 20px;
-  }
+  } */
 }

@@ -1,23 +1,22 @@
 const aboutMe = document.querySelector('.bodyContent');
 const scroll = document.querySelector('.btn-scrolle');
 const stickyNav = document.querySelector('.navbar');
+const navMobile = document.querySelector('.navbar-toggle-label');
+const h1Header = document.querySelector('.h1-name');
 
 // Download file
 // <form method="get" action="file.doc">
 //    <button type="submit">Download!</button>
 // </form>
+navMobile.addEventListener('click', () => {
+  h1Header.classList.toggle('h1-nav');
+  // if (document.maxWidth = "600px") {
+  //   h1Header.classList.remove('h1-nav');
+  // }
+})
+
 scroll.addEventListener('click', function (e) {
   const s1coords = aboutMe.getBoundingClientRect();
-  // console.log(s1coords);
-  // console.log(e.target.getBoundingClientRect());
-  //
-  // console.log(window.pageXOffset, window.pageYOffset);
-  //
-  // console.log(
-  //   'height/width viewport',
-  //   document.documentElement.clientHeight,
-  //   document.documentElement.clientWidth
-  // );
   window.scrollTo({
     left: s1coords.left + window.pageXOffset,
     top: s1coords.top + window.pageYOffset,
